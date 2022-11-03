@@ -1,15 +1,12 @@
-#changeScene.py
-#HMWK #2
-
-from graphics import *
+from graphics import Circle,Oval,Polygon,GraphWin,Text,Point
 
 def main():
 
+    
+    win = GraphWin('Draw a Hat for him!', 350, 350) #define window size
+    win.yUp() #define orientation
 
-    
-    
-    win = GraphWin('Draw a Hat for him!', 350, 350)
-    win.yUp()
+    #define background + text 
     win.setBackground('white')
     message = Text(Point(win.getWidth()/2, 40), 'Click on three points to draw a hat on his head')
     message.setTextColor('red')
@@ -17,19 +14,23 @@ def main():
     message.setSize(10)
     message.draw(win)
 
-    head = Circle(Point(175,175), 50) # set center and radius of head
+    # head
+    head = Circle(Point(175,175), 50)
     head.setFill("yellow")
     head.draw(win)
 
-    eye1 = Circle(Point(160, 180), 5) # set center and radius of left eye
+    # left eye
+    eye1 = Circle(Point(160, 180), 5) 
     eye1.setFill('blue')
     eye1.draw(win)
 
-    eye2 = Circle(Point(180, 180), 5) # set center and radius of right eye
+    # right eye
+    eye2 = Circle(Point(180, 180), 5) 
     eye2.setFill('blue')
     eye2.draw(win)
 
-    mouth = Oval(Point(150, 160), Point(190, 160)) # set endpoints of mouth
+    # mouth 
+    mouth = Oval(Point(150, 160), Point(190, 155)) 
     mouth.setFill("red")
     mouth.draw(win)
 
